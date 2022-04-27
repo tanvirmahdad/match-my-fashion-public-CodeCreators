@@ -18,7 +18,9 @@ class SearchProfileController < ApplicationController
       flash[:notice] = "No entries matched your search."
     end
   end
-  
+
+
+
   # Not implemented (not needed for this controller, can be deleted)
   def create
   end
