@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FashioNXT</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="shortcut icon" href="<%= asset_path "favicon.jpg"%>">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="<%= asset_path "bootstrap.min.css"%>">
+		<link rel="stylesheet" href="<%= asset_path "icon.css"%>">
+		<link rel="stylesheet" href="<%= asset_path "loader.css"%>">
+		<link rel="stylesheet" href="<%= asset_path "idangerous.swiper.css"%>">
+		<link rel="stylesheet" href="<%= asset_path "jquery-ui.css"%>">
+		<link rel="stylesheet" href="<%= asset_path "stylesheet.css"%>">
+    	<link rel="stylesheet" href="<%= asset_path "profile.css"%>">
+	</head>
+
+	<body>
+	<!-- THE LOADER -->
+	<div class="be-loader">
+    	<div class="spinner">
+			<img id="spinner-img" src="<%= asset_path "logo.png"%>"  alt="">
+			<p class="circle">
+			  <span class="ouro">
+			    <span class="left"><span class="anim"></span></span>
+			    <span class="right"><span class="anim"></span></span>
+			  </span>
+			</p>
+		</div>
+    </div>
+
+	<!-- THE HEADER -->
+	<%= render 'shared/header' %>
+
+	<!-- MAIN CONTENT -->
+	<div id="content-block">
+		<div class="head-bg">
+			<div class="head-bg-img"></div>
+
+			<div class="large-popup-fixed"></div>
+			<% if flash[:notice] %>
+			<div class="alert-container col-md-12">
+				<div class="alert style-3 alert-dismissible">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				    <strong><%= flash[:notice]%></strong>
+				</div>
+			</div>
+			<% elsif flash[:success] %>
+			<div class="alert-container col-md-12">
+				<div class="alert style-3 alert-dismissible">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				    <strong><%= flash[:success]%></strong>
+				</div>
+			</div>
+			<% end %>
+
+			<div class=head-bg-content>
+				<div class="homepage-login-btn-section">
+					<div class="landing_search_button">
+						<%= link_to 'What Are You Looking For?', search_engine_show_path, :id => "custom_but_style" %>
+					</div>
+				</div>
+				<div class="login_block">
+					
+					<div class="register_howitworks">
+						<a class="be-register color-1 size-1 register-but-below-search-but" href="">Register Your Business>></a>
+						<a class=" color-1 size-1 register-but-below-search-but" href="">How It Works>></a>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+
+    <%= render 'layout/category' %>
+        
+    <div class="container-fluid custom-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div id="container-mix"  class="row _post-container_">
+            
+            <div class="be-post" id="Model1">
+              <% @users.present? and @users.each do |info| %>
+                <div class="category-1 mix custom-column-5">
+                  <% if info.attribute_values[:job_name]=="Model" %>
+                  	<a class="be-img-block">
+					  <div class="photo photo-type-line">
+                  		<% if info.profile_picture? %>
+                  			<img src="<%= info.profile_picture.url %>" alt="omg">
+                  		<% else %>
+                  			<img class="profile-img" src="<%= asset_path 'avatar-icon.png' %>">
+                  		<% end %>
+							<a class="photo-hover" href="<%= show_profile_show_profile_path(:user_key => info.userKey) %>">
+								<div class="photo-info">
+									<div class="headline"><%= info.first_name %> <%= info.last_name %></div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.city %> </div>
+										<div class="desc"> <%= info.state %> </div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.bio %> </div>
+								</div>
+								<div class="mask"></div>
+							</a>
+					  </div>
+                  	</a>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="be-post" id="Photographer1">
+              <% @users.present? and @users.each do |info| %>
+                <div class="category-1 mix custom-column-5">
+                  <% if info.attribute_values[:job_name]=="Photographer" %>
+                  <a class="be-img-block">
+					  <div class="photo photo-type-line">
+                  		<% if info.profile_picture? %>
+                  			<img src="<%= info.profile_picture.url %>" alt="omg">
+                  		<% else %>
+                  			<img class="profile-img" src="<%= asset_path 'avatar-icon.png' %>">
+                  		<% end %>
+							<a class="photo-hover" href="<%= show_profile_show_profile_path(:user_key => info.userKey) %>">
+								<div class="photo-info">
+									<div class="headline"><%= info.first_name %> <%= info.last_name %></div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.city %> </div>
+										<div class="desc"> <%= info.state %> </div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.bio %> </div>
+								</div>
+								<div class="mask"></div>
+							</a>
+					  </div>
+                  	</a>
+				   <% end %>
+                </div>
+              <% end %>
+            </div>
+          
+            <div class="be-post" id="Agent1">
+              <% @users.present? and @users.each do |info| %>
+                <div class="category-1 mix custom-column-5">
+                  <% if info.attribute_values[:job_name]=="Agent" %>
+                  <a class="be-img-block">
+					  <div class="photo photo-type-line">
+                  		<% if info.profile_picture? %>
+                  			<img src="<%= info.profile_picture.url %>" alt="omg">
+                  		<% else %>
+                  			<img class="profile-img" src="<%= asset_path 'avatar-icon.png' %>">
+                  		<% end %>
+							<a class="photo-hover" href="<%= show_profile_show_profile_path(:user_key => info.userKey) %>">
+								<div class="photo-info">
+									<div class="headline"><%= info.first_name %> <%= info.last_name %></div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.city %> </div>
+										<div class="desc"> <%= info.state %> </div>
+									<div class="line"></div>
+										<div class="desc"> <%= info.bio %> </div>
+								</div>
+								<div class="mask"></div>
+							</a>
+					  </div>
+                  	</a>
+				   <% end %>
+                </div>
+              <% end %>
+            </div>
+          
+            <div class="be-post" id="Designer1">
+              <% @users.present? and @users.each do |info| %>
+              <div class="category-1 mix custom-column-5">
+                <% if info.attribute_values[:job_name]=="Designer" %>
+				<a class="be-img-block">
+				<div class="photo photo-type-line">
+					<% if info.profile_picture? %>
+						<img src="<%= info.profile_picture.url %>" alt="omg">
+					<% else %>
+						<img class="profile-img" src="<%= asset_path 'avatar-icon.png' %>">
+					<% end %>
+					  <a class="photo-hover" href="<%= show_profile_show_profile_path(:user_key => info.userKey) %>">
+						  <div class="photo-info">
+							  <div class="headline"><%= info.first_name %> <%= info.last_name %></div>
+							  <div class="line"></div>
+								  <div class="desc"> <%= info.city %> </div>
+								  <div class="desc"> <%= info.state %> </div>
+							  <div class="line"></div>
+								  <div class="desc"> <%= info.bio %> </div>
+						  </div>
+						  <div class="mask"></div>
+					  </a>
+				</div>
+				</a>
+			 <% end %>
+              </div>
+              <% end %>
+            </div>
+          
+            <div class="be-post" id="Everyone1">
+              <% @users.present? and @users.each do |info| %>
+                <div class="category-1 mix custom-column-5">
+				<a class="be-img-block">
+				<div class="photo photo-type-line">
+					<% if info.profile_picture? %>
+						<img src="<%= info.profile_picture.url %>" alt="omg">
+					<% else %>
+						<img class="profile-img" src="<%= asset_path 'avatar-icon.png' %>">
+					<% end %>
+					  <a class="photo-hover" href="<%= show_profile_show_profile_path(:user_key => info.userKey) %>">
+						  <div class="photo-info">
+							  <div class="headline"><%= info.first_name %> <%= info.last_name %></div>
+							  <div class="line"></div>
+								  <div class="desc"> <%= info.city %> </div>
+								  <div class="desc"> <%= info.state %> </div>
+							  <div class="line"></div>
+								  <div class="desc"> <%= info.bio %> </div>
+						  </div>
+						  <div class="mask"></div>
+					  </a>
+				</div>
+				</a>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- THE FOOTER -->
+	<footer>
+		<div class="footer-main">
+			<div class="container-fluid custom-container">
+				<div class="row">
+					<div class="col-md-3 col-xl-4">
+						<div class="footer-block">
+							<h1 class="footer-title">About Us</h1>
+							<p><a href="https://fashionxt.com/">FashioNXT</a> creates innovative fashion experiences and the creative edge in lifestyle technology.</p>
+							<ul class="soc_buttons">
+								<li id="fb"><a href="https://www.facebook.com/FASHIONXtONLINE/"><i class="fa fa-facebook"></i></a></li>
+								<li id="twitter"><a href="https://twitter.com/fashionxtonline"><i class="fa fa-twitter"></i></a></li>
+								<li id="pinterest"><a href="https://www.pinterest.com/fashionxtonline/"><i class="fa fa-pinterest"></i></a></li>
+								<li id="insta"><a href="https://www.instagram.com/fashionxtonline/"><i class="fa fa-instagram"></i></a></li>
+								<li id="linkedin"><a href="https://www.linkedin.com/company/fashionxt/"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-2">
+						<div class="footer-block">
+							<h1 class="footer-title">Useful Links</h1>
+							<div class="row footer-list-footer">
+							<div class="col-md-6">
+							<ul class="link-list">
+								<li><a href="https://fashionxt.com/agency/">About Us</a></li>
+								<li><a href="https://fashionxt.com/contact/">Help</a></li>
+								<li><a href="https://fashionxt.com/contact/">Contacts</a></li>
+								<li><a href="https://www.linkedin.com/company/fashionxt/jobs/">Job</a></li>
+							</ul></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container-fluid custom-container">
+				<div class="col-md-12 footer-end clearfix">
+					<div class="left">
+						<span class="copy">© 2020. All rights reserved. &nbsp <span class="white"><a href="fashionxt.com"> FashioNXT</a></span></span>
+						<span class="created">Created by <span class="white"><a href=""> CodeCreators</a></span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="be-fixed-filter"></div>
+
+	<%= form_for :login_info, :action => 'login_submit', :url => login_info_login_submit_path do |form| %>
+	<div class="large-popup login">
+		<div class="container large-popup-container">
+			<div class="row">
+				<div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3  large-popup-content">
+					<div class="row">
+						<div class="col-md-12">
+							<i class="fa fa-times close-button"></i>
+							<h5 class="large-popup-title">Log in</h5>
+						</div>
+						<form action="#" class="popup-input-search" method="post">
+						<div class="col-md-6">
+							<%= form.text_field :email, :class => 'input-signtype', :id => 'email', :placeholder => 'Your Email', :required => ''%>
+							<!--<input class="input-signtype" type="email" required="" placeholder="Your email">-->
+						</div>
+						<div class="col-md-6 form-group">
+							<%= form.password_field :password, :class => 'input-signtype', :id => 'password', :placeholder => 'Your Password', :required => '' %>
+							<!--<input id= "password" class="input-signtype" type="password" required="" placeholder="Password">-->
+						</div>
+						<div class="col-xs-6"></div>
+						<div class="col-xs-6 for-signin">
+							<%= form.submit "SIGN IN", :class => 'be-popup-sign-button', :type => 'submit' %>
+							<!--<input type="submit" class="be-popup-sign-button" value="SIGN IN">-->
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% end %>
+	<%= form_for :login_info, :action => 'create', :url => login_info_create_path do |form| %>
+	<div class="large-popup register">
+		<div class="large-popup-fixed"></div>
+		<div class="container large-popup-container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 large-popup-content">
+					<div class="row">
+						<div class="col-md-12">
+							<i class="fa fa-times close-button"></i>
+							<h5 class="large-popup-title">Register</h5>
+						</div>
+						<form action="./" class="popup-input-search" method="post">
+
+						<div class="col-md-4">
+							<%= form.text_field :email, :class => 'input-signtype', :id => 'email', :placeholder => 'Email', :required => ''%>
+							<!--<input class="input-signtype" type="text" required="" placeholder="Email">-->
+						</div>
+						<div class="col-md-4">
+							<%= form.password_field :password, :class => 'input-signtype', :id => 'password', :placeholder => 'Password', :required => '' %>
+							<!--<input class="input-signtype" type="text" required="" placeholder="Password">-->
+						</div>
+						<div class="col-md-4">
+							<p style="color:white;">(Should contain one uppercase, one lowercase, one special character, and one digit)</p>
+						</div>
+						<div class="col-md-8">
+							<!--<input id="password_confirmation" class="input-signtype" type="text" required="" placeholder="Repeat Password">-->
+                  			<%= form.password_field :password_confirmation, :class => 'input-signtype', :id => 'confirm', :placeholder => 'Repeat Password', :required => '' %>
+						</div>
+						<div class="col-md-4 for-signin">
+							<%= form.submit "SIGN IN", :class => 'be-popup-sign-button', :type => 'submit' %>
+							<!--<input type="submit" class="be-popup-sign-button" value="SIGN IN">-->
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% end %>
+	<!-- SCRIPTS	 -->
+	<script src="<%= asset_path "jquery.min.js"%>"></script>
+	<script src="<%= asset_path "jquery-ui.js"%>"></script>
+	<script src="<%= asset_path "bootstrap.min.js"%>"></script>
+	<script src="<%= asset_path "idangerous.swiper.min.js"%>"></script>
+	<script src="<%= asset_path "jquery.mixitup.js"%>"></script>
+	<script src="<%= asset_path "jquery.viewportchecker.min.js"%>"></script>
+	<script src="<%= asset_path "global.js"%>"></script>
+  	<script src="<%= asset_path "application.js"%>"></script>
+	</body>
+</html>
