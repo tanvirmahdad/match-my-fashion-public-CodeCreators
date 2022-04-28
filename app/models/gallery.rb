@@ -26,7 +26,6 @@ class Gallery < ApplicationRecord
     validates_presence_of :gallery_description
     validates_presence_of :gallery_picture
     validates_presence_of :GeneralInfo_id
-    validates_presence_of :gallery_collaborators
 
     mount_uploaders :gallery_picture, GalleryUploader
 end

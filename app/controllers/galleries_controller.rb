@@ -4,7 +4,6 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    #puts "HOMMMMMMMMMMM"
     @gallery = Gallery.find(params[:project_key])
   end
 
@@ -28,10 +27,6 @@ class GalleriesController < ApplicationController
   end
 
 
-  #def remove_file(gallery_picture)
-  # File.delete(gallery_picture)
-  #end
-
   #def set_gallery
   # @gallery = Gallery.find(params[:gallery_id])
   #end
@@ -45,6 +40,6 @@ class GalleriesController < ApplicationController
   private
 
   def gallery_params
-    params.permit(:author, :content, :all_tags, :project_key, :gallery, :gallery_title, :gallery_collaborators, :gallery_description, :ratings, :gallery_totalRate, :gallery_totalRator, :GeneralInfo_id, :gallery_picture => [])
+    params.permit(:author, :content, :all_tags, :project_key, :gallery, :gallery_title, :gallery_description, :ratings, :gallery_totalRate, :gallery_totalRator, :GeneralInfo_id, :gallery_picture => [])
   end
 end
