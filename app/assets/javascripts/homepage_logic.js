@@ -5,57 +5,10 @@
 var indicator=localStorage.getItem('buttonpressed');
 
 
-//temporary code
-if(indicator=='false'){
-
-    $(".modeldiv").hide();
-    $(".branddiv").hide();
-    $(".othercreatordiv").hide();
-    $(".influencerdiv").hide();
-    $(".bloggingdiv").hide();
-    $(".contentdiv").hide();
-    $(".salesdiv").hide();
-    $(".marketingdiv").hide();
-    $(".retaildiv").hide();
-    $(".financingdiv").hide();
-    $(".otherservicesdiv").hide();
-    $(".manufacturingdiv").hide();
-    $(".materialsdiv").hide();
-    $(".othermakersdiv").hide();
-    $(".photographerdiv").hide();
-    $(".agentdiv").hide();
-    $(".designerdiv").hide();
-    $(".everyonediv").hide();
-    $(".stylistdiv").hide();
-    $(".forecastingdiv").hide();
-    $(".othercreatorbutton").removeClass("active");
-    $(".contentbutton").removeClass("active");
-    $(".influencerbutton").removeClass("active");
-    $(".salesbutton").removeClass("active");
-    $(".marketingbutton").removeClass("active");
-    $(".visualbutton").removeClass("active");
-    $(".retailbutton").removeClass("active");
-    $(".bloggerbutton").removeClass("active");
-    $(".financingbutton").removeClass("active");
-    $(".otherservicesbutton").removeClass("active");
-    $(".manufacturingbutton").removeClass("active");
-    $(".materialsbutton").removeClass("active");
-    $(".othermakersbutton").removeClass("active");
-    $(".designerbutton").removeClass("active");
-    $(".everyonebutton").removeClass("active");
-    $(".agentbutton").removeClass("active");
-    $(".photographerbutton").removeClass("active");
-    $(".brandbutton").removeClass("active");
-    $(".stylistbutton").removeClass("active");
-    $(".forecastingbutton").removeClass("active");
-    $(".modelbutton").removeClass("active");
-
-}
 
 if(indicator=='model'){
     localStorage.setItem('buttonpressed', 'model');
     $(".modeldiv").show();
-    $(".alldiv").hide();
     $(".branddiv").hide();
     $(".othercreatordiv").hide();
     $(".influencerdiv").hide();
@@ -102,7 +55,6 @@ if(indicator=='model'){
 if(indicator=='brand'){
     localStorage.setItem('buttonpressed', 'brand');
     $(".branddiv").show();
-    $(".alldiv").hide();
     $(".othercreatordiv").hide();
     $(".influencerdiv").hide();
     $(".bloggingdiv").hide();
@@ -149,7 +101,6 @@ if(indicator=='photographer'){
 
     localStorage.setItem('buttonpressed', 'photographer');
     $(".photographerdiv").show();
-    $(".alldiv").hide();
     $(".branddiv").hide();
     $(".othercreatordiv").hide();
     $(".influencerdiv").hide();
@@ -195,7 +146,6 @@ if(indicator=='photographer'){
 
     localStorage.setItem('buttonpressed', 'designer');
     $(".designerdiv").show();
-    $(".alldiv").hide();
     $(".photographerdiv").hide();
     $(".branddiv").hide();
     $(".othercreatordiv").hide();
@@ -240,7 +190,6 @@ if(indicator=='photographer'){
 }if(indicator=='othercreator'){
     localStorage.setItem('buttonpressed', 'othercreator');
     $(".othercreatordiv").show();
-    $(".alldiv").hide();
     $(".designerdiv").hide();
     $(".photographerdiv").hide();
     $(".branddiv").hide();
@@ -287,7 +236,6 @@ if(indicator=='photographer'){
 if(indicator=='influencer'){
     localStorage.setItem('buttonpressed', 'influencer');
     $(".influencerdiv").show();
-    $(".alldiv").hide();
     $(".othercreatordiv").hide();
     $(".designerdiv").hide();
     $(".photographerdiv").hide();
@@ -335,7 +283,6 @@ if(indicator=='influencer'){
 if(indicator=='content'){
     localStorage.setItem('buttonpressed', 'content');
     $(".contentdiv").show();
-    $(".alldiv").hide();
     $(".influencerdiv").hide();
     $(".othercreatordiv").hide();
     $(".designerdiv").hide();
@@ -384,7 +331,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'sales');
     $(".salesdiv").show();
-    $(".alldiv").hide();
     $(".contentdiv").hide();
     $(".influencerdiv").hide();
     $(".othercreatordiv").hide();
@@ -431,7 +377,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'blogger');
     $(".bloggingdiv").show();
-    $(".alldiv").hide();
     $(".salesdiv").hide();
     $(".contentdiv").hide();
     $(".influencerdiv").hide();
@@ -478,7 +423,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'marketing');
     $(".marketingdiv").show();
-    $(".alldiv").hide();
     $(".bloggingdiv").hide();
     $(".salesdiv").hide();
     $(".contentdiv").hide();
@@ -524,7 +468,6 @@ if(indicator=='sales'){
 }if(indicator=='retail'){
     localStorage.setItem('buttonpressed', 'retail');
     $(".retaildiv").show();
-    $(".alldiv").hide();
     $(".marketingdiv").hide();
     $(".bloggingdiv").hide();
     $(".salesdiv").hide();
@@ -571,7 +514,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'visual');
     $(".visualdiv").show();
-    $(".alldiv").hide();
     $(".retaildiv").hide();
     $(".marketingdiv").hide();
     $(".bloggingdiv").hide();
@@ -619,7 +561,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'financing');
     $(".financingdiv").show();
-    $(".alldiv").hide();
     $(".visualdiv").hide();
     $(".retaildiv").hide();
     $(".marketingdiv").hide();
@@ -667,7 +608,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'forecasting');
     $(".forecastingdiv").show();
-    $(".alldiv").hide();
     $(".financingdiv").hide();
     $(".visualdiv").hide();
     $(".retaildiv").hide();
@@ -715,7 +655,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'stylist');
     $(".forecastingdiv").hide();
-    $(".alldiv").hide();
     $(".financingdiv").hide();
     $(".visualdiv").hide();
     $(".retaildiv").hide();
@@ -763,7 +702,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'otherservices');
     $(".otherservicesdiv").show();
-    $(".alldiv").hide();
     $(".financingdiv").hide();
     $(".visualdiv").hide();
     $(".retaildiv").hide();
@@ -811,7 +749,6 @@ if(indicator=='sales'){
 
     localStorage.setItem('buttonpressed', 'manufacturing');
     $(".manufacturingdiv").show();
-    $(".alldiv").hide();
     $(".otherservicesdiv").hide();
     $(".financingdiv").hide();
     $(".visualdiv").hide();
@@ -858,7 +795,6 @@ if(indicator=='sales'){
 }if(indicator=='materials'){
     localStorage.setItem('buttonpressed', 'materials');
     $(".materialsdiv").show();
-    $(".alldiv").hide();
     $(".manufacturingdiv").hide();
     $(".otherservicesdiv").hide();
     $(".financingdiv").hide();
@@ -906,9 +842,7 @@ if(indicator=='sales'){
 }if(indicator=='othermakers'){
 
     localStorage.setItem('buttonpressed', 'othermakers');
-    $(".othermakersdiv").show();
     $(".materialsdiv").hide();
-    $(".alldiv").hide();
     $(".manufacturingdiv").hide();
     $(".otherservicesdiv").hide();
     $(".financingdiv").hide();

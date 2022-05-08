@@ -1,6 +1,3 @@
-
-
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -24,34 +21,53 @@
 
 $( document ).ready(function() {
     console.log("I am inside document function");
-    $(".modeldiv").hide();
-    $(".branddiv").hide();
-    $(".othercreatordiv").hide();
-    $(".influencerdiv").hide();
-    $(".bloggingdiv").hide();
-    $(".contentdiv").hide();
-    $(".salesdiv").hide();
-    $(".marketingdiv").hide();
-    $(".retaildiv").hide();
-    $(".financingdiv").hide();
-    $(".otherservicesdiv").hide();
-    $(".manufacturingdiv").hide();
-    $(".materialsdiv").hide();
-    $(".othermakersdiv").hide();
-    $(".photographerdiv").hide();
+    $(".modeldiv").show();
+    $(".branddiv").show();
+    $(".othercreatordiv").show();
+    $(".influencerdiv").show();
+    $(".bloggingdiv").show();
+    $(".contentdiv").show();
+    $(".salesdiv").show();
+    $(".marketingdiv").show();
+    $(".retaildiv").show();
+    $(".financingdiv").show();
+    $(".otherservicesdiv").show();
+    $(".manufacturingdiv").show();
+    $(".materialsdiv").show();
+    $(".othermakersdiv").show();
+    $(".photographerdiv").show();
     $(".agentdiv").hide();
-    $(".designerdiv").hide();
+    $(".designerdiv").show();
     $(".everyonediv").hide();
-    $(".stylistdiv").hide();
-    $(".forecastingdiv").hide();
-
-
+    $(".stylistdiv").show();
+    $(".forecastingdiv").show();
+    $(".othercreatorbutton").addClass("active");
+    $(".contentbutton").addClass("active");
+    $(".influencerbutton").addClass("active");
+    $(".salesbutton").addClass("active");
+    $(".marketingbutton").addClass("active");
+    $(".visualbutton").addClass("active");
+    $(".retailbutton").addClass("active");
+    $(".bloggerbutton").addClass("active");
+    $(".financingbutton").addClass("active");
+    $(".otherservicesbutton").addClass("active");
+    $(".manufacturingbutton").addClass("active");
+    $(".materialsbutton").addClass("active");
+    $(".othermakersbutton").addClass("active");
+    $(".designerbutton").addClass("active");
+    $(".everyonebutton").removeClass("active");
+    $(".agentbutton").removeClass("active");
+    $(".photographerbutton").addClass("active");
+    $(".brandbutton").addClass("active");
+    $(".modelbutton").addClass("active");
+    $(".stylistbutton").addClass("active");
+    $(".forecastingbutton").addClass("active");
 
     //$(".modeldiv").hide();
     //$(".photographerdiv").hide();
     //$(".agentdiv").hide();
     //$(".designerdiv").hide();
-    //$(".everyonediv").hide();
+   //$(".everyonediv").hide();
     //$(".branddiv").hide();
     console.log("Printing Button Status:..")
 
@@ -59,7 +75,6 @@ $( document ).ready(function() {
     $(".modelbutton").on("click", function(){
         localStorage.setItem('buttonpressed', 'model');
         $(".modeldiv").show();
-        $(".alldiv").hide();
         $(".branddiv").hide();
         $(".othercreatordiv").hide();
         $(".influencerdiv").hide();
@@ -105,7 +120,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'brand');
         $(".branddiv").show();
-        $(".alldiv").hide();
         $(".othercreatordiv").hide();
         $(".influencerdiv").hide();
         $(".bloggingdiv").hide();
@@ -152,7 +166,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'photographer');
         $(".photographerdiv").show();
-        $(".alldiv").hide();
         $(".branddiv").hide();
         $(".othercreatordiv").hide();
         $(".influencerdiv").hide();
@@ -199,7 +212,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'designer');
         $(".designerdiv").show();
-        $(".alldiv").hide();
         $(".photographerdiv").hide();
         $(".branddiv").hide();
         $(".othercreatordiv").hide();
@@ -246,7 +258,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'othercreator');
         $(".othercreatordiv").show();
-        $(".alldiv").hide();
         $(".designerdiv").hide();
         $(".photographerdiv").hide();
         $(".branddiv").hide();
@@ -293,7 +304,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'influencer');
         $(".influencerdiv").show();
-        $(".alldiv").hide();
         $(".othercreatordiv").hide();
         $(".designerdiv").hide();
         $(".photographerdiv").hide();
@@ -340,7 +350,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'content');
         $(".contentdiv").show();
-        $(".alldiv").hide();
         $(".influencerdiv").hide();
         $(".othercreatordiv").hide();
         $(".designerdiv").hide();
@@ -388,7 +397,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'sales');
         $(".salesdiv").show();
-        $(".alldiv").hide();
         $(".contentdiv").hide();
         $(".influencerdiv").hide();
         $(".othercreatordiv").hide();
@@ -436,7 +444,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'blogger');
         $(".bloggingdiv").show();
-        $(".alldiv").hide();
         $(".salesdiv").hide();
         $(".contentdiv").hide();
         $(".influencerdiv").hide();
@@ -484,7 +491,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'marketing');
         $(".marketingdiv").show();
-        $(".alldiv").hide();
         $(".bloggingdiv").hide();
         $(".salesdiv").hide();
         $(".contentdiv").hide();
@@ -532,7 +538,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'retail');
         $(".retaildiv").show();
-        $(".alldiv").hide();
         $(".marketingdiv").hide();
         $(".bloggingdiv").hide();
         $(".salesdiv").hide();
@@ -580,7 +585,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'visual');
         $(".visualdiv").show();
-        $(".alldiv").hide();
         $(".retaildiv").hide();
         $(".marketingdiv").hide();
         $(".bloggingdiv").hide();
@@ -629,7 +633,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'financing');
         $(".financingdiv").show();
-        $(".alldiv").hide();
         $(".visualdiv").hide();
         $(".retaildiv").hide();
         $(".marketingdiv").hide();
@@ -678,7 +681,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'forecasting');
         $(".forecastingdiv").show();
-        $(".alldiv").hide();
         $(".financingdiv").hide();
         $(".visualdiv").hide();
         $(".retaildiv").hide();
@@ -727,7 +729,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'stylist');
         $(".forecastingdiv").hide();
-        $(".alldiv").hide();
         $(".financingdiv").hide();
         $(".visualdiv").hide();
         $(".retaildiv").hide();
@@ -776,7 +777,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'otherservices');
         $(".otherservicesdiv").show();
-        $(".alldiv").hide();
         $(".financingdiv").hide();
         $(".visualdiv").hide();
         $(".retaildiv").hide();
@@ -825,7 +825,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'manufacturing');
         $(".manufacturingdiv").show();
-        $(".alldiv").hide();
         $(".otherservicesdiv").hide();
         $(".financingdiv").hide();
         $(".visualdiv").hide();
@@ -874,7 +873,6 @@ $( document ).ready(function() {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'materials');
         $(".materialsdiv").show();
-        $(".alldiv").hide();
         $(".manufacturingdiv").hide();
         $(".otherservicesdiv").hide();
         $(".financingdiv").hide();
@@ -923,9 +921,7 @@ $( document ).ready(function() {
     $(".othermakersbutton").click(function () {
         //console.log("Goosebump");
         localStorage.setItem('buttonpressed', 'othermakers');
-        $(".othermakersiv").show();
         $(".materialsdiv").hide();
-        $(".alldiv").hide();
         $(".manufacturingdiv").hide();
         $(".otherservicesdiv").hide();
         $(".financingdiv").hide();
@@ -989,7 +985,6 @@ $( document ).ready(function() {
 
 
 });
-
 
 
 
